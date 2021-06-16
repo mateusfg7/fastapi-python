@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  fastapi:
+    container_name: fastapi
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    ports:
+      - '8001:80'
+    volumes:
+      - './:/app'
